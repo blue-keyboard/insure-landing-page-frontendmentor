@@ -1,0 +1,79 @@
+.footer {
+  position: relative;
+  background-color: $veryLightGrey;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  @include breakpoint-up(large) {
+    text-align: left;
+  }
+
+  &__container {
+    position: relative;
+    padding: 5.5rem 1.5rem;
+    @include breakpoint-up(large) {
+      padding: 3.9rem 1.5rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.9rem;
+    border-bottom: 1px solid darken($veryLightGrey, 15);
+    margin-bottom: 2.9rem;
+    @include breakpoint-up(large) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--img {
+      margin-bottom: 2rem;
+      @include breakpoint-up(large) {
+        margin: 0;
+      }
+    }
+
+    .social {
+      &--link {
+        fill: $darkGrayishViolet;
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        &:hover {
+          fill: $veryDarkViolet;
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &--item {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 15rem;
+      margin-bottom: 2rem;
+      span {
+        color: $darkGrayishViolet;
+        margin-bottom: 2rem;
+        letter-spacing: 1px;
+      }
+
+      a {
+        margin-bottom: 1rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

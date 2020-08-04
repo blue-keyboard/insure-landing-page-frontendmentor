@@ -1,0 +1,100 @@
+.were-diff {
+  &__container {
+    text-align: center;
+    padding: 8rem 1.5rem;
+    @include breakpoint-up(large) {
+      padding: 19rem 1.5rem 9rem 1.5rem;
+    }
+
+    @include breakpoint-up(largeplus) {
+      text-align: left;
+    }
+  }
+
+  .top-line {
+    display: inline-block;
+    background-color: lighten($darkViolet, 50%);
+    margin-bottom: 3.6rem;
+  }
+
+  h1 {
+    margin-bottom: 5rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5rem;
+    @include breakpoint-up(largeplus) {
+      justify-content: start;
+    }
+
+    &--item {
+      flex: 1;
+      margin-bottom: 2.5rem;
+      min-width: 22rem;
+      justify-content: center;
+    }
+
+    img {
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+    }
+
+    p {
+      color: $darkGrayishViolet;
+      max-width: 22rem;
+      margin-left: auto;
+      margin-right: auto;
+      @include breakpoint-up(largeplus) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__how-we-work {
+    position: relative;
+    background-color: $darkViolet;
+    color: white;
+    padding: 4.7rem 1.5rem;
+    overflow: hidden;
+    @include breakpoint-up(large) {
+      padding: 4.3rem 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    & > * {
+      position: relative;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 2.7rem;
+      @include breakpoint-up(large) {
+        width: 50%;
+        margin-bottom: 0;
+      }
+
+      @include breakpoint-up(largeplus) {
+        font-size: 3.5rem;
+      }
+    }
+
+    .button {
+      font-size: 14px;
+      display: inline-block;
+      padding: 0.65rem 1.4rem;
+      border: solid 1px white;
+
+      &:hover {
+        background-color: white;
+        color: $darkViolet;
+      }
+    }
+  }
+}

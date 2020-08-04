@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-body;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-headings;
+  line-height: 1;
+  margin: 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2.9rem;
+  font-weight: 400;
+  @include breakpoint-up(large) {
+    font-size: 4.3rem;
+  }
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 1px;
+  @include breakpoint-up(large) {
+    font-weight: bold;
+  }
+}
+
+.container {
+  max-width: 74rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-line {
+  display: none;
+  height: 1px;
+  width: 9rem;
+  @include breakpoint-up(large) {
+    display: block;
+    margin-bottom: 4rem;
+  }
+}
